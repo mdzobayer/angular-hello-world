@@ -31,9 +31,10 @@ import { Component } from '@angular/core';
         <div (click)="onDivClicked()">
         <button (click)="onSave($event)">Click me</button>                              <!-- Event buinding --> 
         </div>
-        <input type="text" #Email (keyup.enter)="onKeyUp1(Email.value)" />                                             <!-- Taking value with Template varibale -->
+        <input type="text" #Email (keyup.enter)="onKeyUp1(Email.value)" />                                             <!-- View to component with Template varibale -->
 
-        <input type="text" [value]="email" (keyup.enter)="onKeyUp()" />                                             <!-- Component to view -->
+        <input type="text" [value]="email" (keyup.enter)="onKeyUp()" />                                             <!-- Component to view with property buinding [one direction] -->
+        <input type="text" [value]="email" (keyup.enter)="email = $event.target.value; onKeyUp()" />                                             <!-- Component to view and View to component with property buinding [both direction] -->
     `
 })
 export class CoursesComponent {

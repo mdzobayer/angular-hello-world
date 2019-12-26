@@ -1,6 +1,7 @@
 import { CoursesService } from './courses.service';
 import { PersonComponent } from './person.component';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -17,6 +18,7 @@ import { CourseComponent } from './course/course.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule
   ],
   providers: [

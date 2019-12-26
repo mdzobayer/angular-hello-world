@@ -31,7 +31,7 @@ import { Component } from '@angular/core';
         <div (click)="onDivClicked()">
         <button (click)="onSave($event)">Click me</button>                              <!-- Event buinding --> 
         </div>
-        <input (keyup.enter)="onKeyUp($event)" />                                             <!-- Taking value via Event Filtering -->
+        <input type="text" #email (keyup.enter)="onKeyUp(email.value)" />                                             <!-- Taking value with Template varibale -->
     `
 })
 export class CoursesComponent {
@@ -59,9 +59,9 @@ export class CoursesComponent {
         console.log("Div was clicked");
     }
 
-    onKeyUp($event) {
+    onKeyUp(email) {
 
-        console.log($event.target.value);
+        console.log(email);
 
     }
 

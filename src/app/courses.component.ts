@@ -29,9 +29,9 @@ import { Component } from '@angular/core';
         <button class="btn btn-primary" [class.active]="isActive">Save</button>         <!-- Class buinding -->
         <button [style.backgroundColor]="isActive ? 'blue' : 'white'">Save2 </button>   <!-- Style buinding --> 
         <div (click)="onDivClicked()">
-        <button (click)="onSave($event)">Click me</button>                                    <!-- Event buinding --> 
+        <button (click)="onSave($event)">Click me</button>                              <!-- Event buinding --> 
         </div>
-        <input (keyup)="onKeyUp($event)" />
+        <input (keyup.enter)="onKeyUp()" />                                             <!-- Event Filtering -->
     `
 })
 export class CoursesComponent {
@@ -59,10 +59,10 @@ export class CoursesComponent {
         console.log("Div was clicked");
     }
 
-    onKeyUp($event) {
-        if ($event.keyCode === 13) {
-            console.log("ENTER was pressed");
-        }
+    onKeyUp() {
+
+        console.log("ENTER was pressed");
+
     }
 
     // Logic for calling an http service

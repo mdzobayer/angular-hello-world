@@ -31,7 +31,7 @@ import { Component } from '@angular/core';
         <div (click)="onDivClicked()">
         <button (click)="onSave($event)">Click me</button>                              <!-- Event buinding --> 
         </div>
-        <input type="text" #email (keyup.enter)="onKeyUp(email.value)" />                                             <!-- Taking value with Template varibale -->
+        <input type="text" [value]="email" (keyup.enter)="onKeyUp()" />                                             <!-- Taking value with Template varibale -->
     `
 })
 export class CoursesComponent {
@@ -40,6 +40,8 @@ export class CoursesComponent {
     imageUrl = "http://lorempixel.com/400/200";
     colSpan = 2;
     isActive = true;
+
+    email:string = "me@someone.somewhere" ;
 
     constructor(service: CoursesService) {
         //let service = new CoursesService();
@@ -59,9 +61,9 @@ export class CoursesComponent {
         console.log("Div was clicked");
     }
 
-    onKeyUp(email) {
+    onKeyUp() {
 
-        console.log(email);
+        console.log(this.email);
 
     }
 

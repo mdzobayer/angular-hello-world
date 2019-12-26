@@ -35,6 +35,7 @@ import { Component } from '@angular/core';
 
         <input type="text" [value]="email" (keyup.enter)="onKeyUp()" />                                             <!-- Component to view with property buinding [one direction] -->
         <input type="text" [value]="email" (keyup.enter)="email = $event.target.value; onKeyUp()" />                                             <!-- Component to view and View to component with property buinding [both direction] -->
+        <input type="text" [(ngModel)]="email" (keyup.enter)="onKeyUp()" />                                             <!-- Banana in box Angular syntax [both direction] -->
     `
 })
 export class CoursesComponent {

@@ -3,3 +3,6 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 
 body { padding: 20px; }
+table, th, td {
+    border: 1px solid black;
+  }

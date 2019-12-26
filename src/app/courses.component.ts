@@ -31,6 +31,7 @@ import { Component } from '@angular/core';
         <div (click)="onDivClicked()">
         <button (click)="onSave($event)">Click me</button>                                    <!-- Event buinding --> 
         </div>
+        <input (keyup)="onKeyUp($event)" />
     `
 })
 export class CoursesComponent {
@@ -56,6 +57,12 @@ export class CoursesComponent {
 
     onDivClicked() {
         console.log("Div was clicked");
+    }
+
+    onKeyUp($event) {
+        if ($event.keyCode === 13) {
+            console.log("ENTER was pressed");
+        }
     }
 
     // Logic for calling an http service

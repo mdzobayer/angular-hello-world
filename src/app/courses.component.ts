@@ -36,7 +36,16 @@ import { Component } from '@angular/core';
         <input type="text" [value]="email" (keyup.enter)="onKeyUp()" />                                             <!-- Component to view with property buinding [one direction] -->
         <input type="text" [value]="email" (keyup.enter)="email = $event.target.value; onKeyUp()" />                                             <!-- Component to view and View to component with property buinding [both direction] -->
         <input type="text" [(ngModel)]="email" (keyup.enter)="onKeyUp()" />                                             <!-- Banana in box Angular syntax [both direction] -->
-    `
+        <br/> <br/>
+        {{ course.title | uppercase }} <br/>
+        {{ course.students | number }} <br/>
+        {{ course.rating | number:'2.5-8' }} <br/>
+        {{ course.price | currency:'AUD':true:'3.2-2' }} <br/>
+        {{ course.releaseDate | date:'shortDate' }} <br/>
+        <br />
+        <p>Summary</p>
+        {{ dummyText | summary:10 }}
+        `
 })
 export class CoursesComponent {
     private title = "List of Courses";
@@ -44,8 +53,17 @@ export class CoursesComponent {
     imageUrl = "http://lorempixel.com/400/200";
     colSpan = 2;
     isActive = true;
+    dummyText:string = "klsdjfiosdhjoiewnndvklnsdokfhksdjflksdjfolkewjhijhnsdlkfjsdklfjlksdjflksdjflksdnfgvklnsdjflkesjfkljsdlkflkhnvoisadhfgoidhfiodsfoijsopiuewior yweuioryhjkwndfklsadflkasd hjklashfoipsdjhiuohihkjshfksjhkhkjlhfklsdahjklsdshdf kljhkjsadhfoiaehrfshiuofewroiuweporijsdlkfjsdlkfjslkdf";
 
     email:string = "me@someone.somewhere" ;
+
+    course = {
+        title: "The Complete Angular Course",
+        rating: 4.9745,
+        students: 30123,
+        price: 190.95,
+        releaseDate: new Date(2016, 3, 1)
+    }
 
     constructor(service: CoursesService) {
         //let service = new CoursesService();

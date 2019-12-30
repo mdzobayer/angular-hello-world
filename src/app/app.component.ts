@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  //title = 'hello-world';
+  title = 'hello-world';
   post = {
     title: "Hello world",
     isFavorite: true

@@ -7,7 +7,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 
 export class FavoriteComponent implements OnInit {
-  @Input() title: string;
+  @Input('T-tle') title: string;                    // Add input alias
   @Input() obj: any;
 
   @Output('click') change = new EventEmitter();     // Add output alias

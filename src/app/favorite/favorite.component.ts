@@ -10,7 +10,7 @@ export class FavoriteComponent implements OnInit {
   @Input() title: string;
   @Input() obj: any;
 
-  @Output() change = new EventEmitter();
+  @Output('click') change = new EventEmitter();     // Add output alias
 
   constructor() { }
 

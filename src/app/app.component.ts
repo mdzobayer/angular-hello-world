@@ -1,4 +1,8 @@
+import { FavoriteChangeEventArg } from './favorite/favorite.component';
 import { Component } from '@angular/core';
+
+
+
 
 @Component({
   selector: 'app-root',
@@ -17,7 +21,7 @@ export class AppComponent {
     age: 15,
     dob: "01-01-1997"
   }
-  childToParent(aParam) {
+  childToParent(aParam:FavoriteChangeEventArg) {
     console.log("Child to Parent: ", aParam);
   }
 }

@@ -25,3 +25,7 @@ export class FavoriteComponent implements OnInit {
   }
 
 }
+
+export interface FavoriteChangeEventArg {
+  change:string;
+}

@@ -1,3 +1,8 @@
 <h1>Angular</h1>
 <courses></courses>
 <person></person>
+<!---
+<app-favorite [title]="post.title"></app-favorite>
+-->
+<br/>
+<app-favorite [obj]="person" (change)="childToParent($event)"></app-favorite>

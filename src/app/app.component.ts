@@ -17,7 +17,7 @@ export class AppComponent {
   }
 
   person = {
-    name: "Zobayer",
+    name: "Koushik Ghosh",
     age: 15,
     dob: "01-01-1997"
   }

@@ -8,7 +8,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 export class FavoriteComponent implements OnInit {
   @Input('T-tle') title: string;                    // Add input alias
-  @Input() obj: any;
+  @Input() obj: Person;
 
   @Output('click') change = new EventEmitter();     // Add output alias
 
@@ -28,4 +28,10 @@ export class FavoriteComponent implements OnInit {
 
 export interface FavoriteChangeEventArg {
   change:string;
+}
+
+export interface Person {
+  name:string;
+  age:number;
+  dob:string;
 }

@@ -21,6 +21,10 @@ export class AppComponent {
     {id: 3, name: 'course3'},
   ];
 
+  onAdd() {
+    this.Courses.push({id: this.Courses.length, name: 'course'});
+  }
+
   post = {
     title: "Hello world",
     isFavorite: true

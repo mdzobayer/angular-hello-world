@@ -23,3 +23,11 @@
     No courses yet from ng-temlate
 </ng-template>
 
+<div [hidden]="true">a Message</div>
+
+<div [hidden]="courses.length == 0">
+    List of courses with hidden property
+</div>
+<div [hidden]="courses.length > 0">
+    List of courses with hidden property
+</div>

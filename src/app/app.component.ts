@@ -13,6 +13,14 @@ export class AppComponent {
   title = 'hello-world';
   courses:number [] = [1, 2];
 
+  viewMode = 'someThingElse';
+
+  Courses = [
+    {id: 1, name: 'course1'},
+    {id: 2, name: 'course2'},
+    {id: 3, name: 'course3'},
+  ];
+
   post = {
     title: "Hello world",
     isFavorite: true

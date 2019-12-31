@@ -5,3 +5,10 @@
 <br/>
 <app-favorite [T-tle]="post.title" [obj]="person" (click)="childToParent($event)"></app-favorite> 
 <!--Call input and output with their alaising name-->
+
+<div *ngIf="courses.length > 0">
+    List of courses
+</div>
+<div *ngIf="courses.length <= 0">
+    No courses yet
+</div>

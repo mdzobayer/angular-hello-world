@@ -49,5 +49,6 @@
 <ul>
     <li *ngFor="let course of Courses; index as i; even as isEven">
         Index: {{i}} Course ID: {{course.id}} Course Name: {{course.name}} <span *ngIf="isEven">(EVEN)</span>
+        <button (click)="onRemove(course)">Remove</button>
     </li>
 </ul>

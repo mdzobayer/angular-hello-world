@@ -25,6 +25,11 @@ export class AppComponent {
     this.Courses.push({id: this.Courses.length, name: 'course'});
   }
 
+  onRemove(Course) {
+    let index = this.Courses.indexOf(Course);
+    this.Courses.splice(index, 1);
+  }
+
   post = {
     title: "Hello world",
     isFavorite: true

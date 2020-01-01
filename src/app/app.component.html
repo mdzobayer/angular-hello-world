@@ -55,7 +55,7 @@
 
 <button (click)="loadCourses()">Load Courses from Server</button>
 <ul>
-    <li *ngFor="let course of WebCourses">
+    <li *ngFor="let course of WebCourses; trackBy: trackCourse">
         {{ course.name}}
     </li>
 </ul>

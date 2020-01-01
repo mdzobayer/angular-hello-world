@@ -38,6 +38,9 @@ export class AppComponent {
       {id: 3, name: 'course3'},
     ];
   }
+  trackCourse(index, course) {
+    return course ? course.id : undefined;    // Track object by courseid insted of object identity
+  }
 
   post = {
     title: "Hello world",

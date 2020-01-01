@@ -52,3 +52,10 @@
         <button (click)="onRemove(course)">Remove</button>
     </li>
 </ul>
+
+<button (click)="loadCourses()">Load Courses from Server</button>
+<ul>
+    <li *ngFor="let course of WebCourses">
+        {{ course.name}}
+    </li>
+</ul>

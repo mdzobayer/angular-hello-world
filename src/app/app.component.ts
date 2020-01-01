@@ -30,6 +30,15 @@ export class AppComponent {
     this.Courses.splice(index, 1);
   }
 
+  WebCourses;
+  loadCourses() {
+    this.WebCourses =  [
+      {id: 1, name: 'course1'},
+      {id: 2, name: 'course2'},
+      {id: 3, name: 'course3'},
+    ];
+  }
+
   post = {
     title: "Hello world",
     isFavorite: true

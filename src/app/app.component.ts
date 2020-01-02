@@ -56,4 +56,12 @@ export class AppComponent {
   childToParent(aParam:FavoriteChangeEventArg) {
     console.log("Child to Parent: ", aParam);
   }
+
+  // Safe traversal operator exampl
+  task = {
+    title: 'Review applications',
+    assignee: {
+      name: 'John Smith'
+    }
+  }
 }

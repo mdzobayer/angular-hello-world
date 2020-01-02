@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { CoursesComponent } from './courses.component';
 import { CourseComponent } from './course/course.component';
 import { FavoriteComponent } from './favorite/favorite.component';
+import { InputFormatDirective } from './input-format.directive';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FavoriteComponent } from './favorite/favorite.component';
     PersonComponent,
     CourseComponent,
     SummaryPipe,
-    FavoriteComponent
+    FavoriteComponent,
+    InputFormatDirective
   ],
   imports: [
     BrowserModule,

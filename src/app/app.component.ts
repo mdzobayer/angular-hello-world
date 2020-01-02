@@ -60,8 +60,6 @@ export class AppComponent {
   // Safe traversal operator exampl
   task = {
     title: 'Review applications',
-    assignee: {
-      name: 'John Smith'
-    }
+    assignee: null
   }
 }

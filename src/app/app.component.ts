@@ -12,6 +12,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'hello-world';
   courses:number [] = [1, 2];
+  canSave:boolean = false;
 
   viewMode = 'someThingElse';
 

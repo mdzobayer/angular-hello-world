@@ -1,4 +1,4 @@
-<form>
+<form #form="ngForm" (ngSubmit)="submit(form)">
     <div class="form-group">First Name<label for="firstName"></label>
         <input 
             required 

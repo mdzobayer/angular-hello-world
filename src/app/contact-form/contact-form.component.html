@@ -31,7 +31,12 @@
             </div>
         </div>
     </div>
-    <div class="checkbox">
+   
+    <div class="form-group">
+        <label for="comment">Comment</label>
+        <textarea ngModel name="comment" id="comment" cols="30" rows="10" class="form-control"></textarea>
+    </div>
+     <div class="checkbox">
         <label>
             <input type="checkbox" ngModel name="isSubscribe"> Subscribe for mailing list
         </label>
@@ -39,9 +44,5 @@
     <p>
         {{form.value | json }}
     </p>
-    <div class="form-group">
-        <label for="comment">Comment</label>
-        <textarea ngModel name="comment" id="comment" cols="30" rows="10" class="form-control"></textarea></div>
-
     <button class="btn btn-primary" [disabled]="!form.valid">Submit</button>
 </form>

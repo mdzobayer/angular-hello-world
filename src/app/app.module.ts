@@ -19,6 +19,7 @@ import { SignupFormComponent } from './signup-form/signup-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NameEditorComponent } from './name-editor/name-editor.component';
 import { ProfileEditorComponent } from './profile-editor/profile-editor.component';
+import { NewCourseFormComponent } from './new-course-form/new-course-form.component';
 
 
 @NgModule({
@@ -35,7 +36,9 @@ import { ProfileEditorComponent } from './profile-editor/profile-editor.componen
     
     NameEditorComponent,
     
-    ProfileEditorComponent
+    ProfileEditorComponent,
+    
+    NewCourseFormComponent
   ],
   imports: [
     BrowserModule,

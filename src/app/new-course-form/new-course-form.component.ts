@@ -28,4 +28,9 @@ export class NewCourseFormComponent implements OnInit {
     return (this.form.get('topics') as FormArray);
   }
 
+  removeTopic(topic: FormControl) {
+    let index = this.topics.controls.indexOf(topic);
+    this.topics.removeAt(index);
+  }
+
 }

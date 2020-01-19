@@ -20,4 +20,16 @@ export class SignupFormComponent {
   get username() {
     return this.form.get('username');
   }
+
+  login() {
+    // let isValid = authService.login(this.form.value);
+    // if (!isValid) {
+    //   this.form.setErrors({
+    //     invalidLogin: true
+    //   });
+    // }
+    this.form.setErrors({
+      invalidLogin: true
+    });
+  }
 }

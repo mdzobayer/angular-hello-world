@@ -20,8 +20,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { NameEditorComponent } from './name-editor/name-editor.component';
 import { ProfileEditorComponent } from './profile-editor/profile-editor.component';
 import { NewCourseFormComponent } from './new-course-form/new-course-form.component';
+import { PostsComponent } from './posts/posts.component';
 
-
+// Http
+import { HttpModule } from '@angular/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,13 +40,16 @@ import { NewCourseFormComponent } from './new-course-form/new-course-form.compon
     
     ProfileEditorComponent,
     
-    NewCourseFormComponent
+    NewCourseFormComponent,
+    
+    PostsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpModule
   ],
   providers: [
     CoursesService

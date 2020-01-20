@@ -10,7 +10,7 @@ export class PostsComponent implements OnInit {
 
   constructor(http: Http) {
     http.get('http://jsonplaceholder.typicode.com/posts').subscribe(response => {
-      console.log(response);
+      console.log(response.json());
     });
   }
 

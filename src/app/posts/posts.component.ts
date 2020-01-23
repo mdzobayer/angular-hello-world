@@ -11,13 +11,14 @@ export class PostsComponent implements OnInit {
   private url = 'http://jsonplaceholder.typicode.com/posts';
 
   constructor(private http: Http) {
-    http.get(this.url).subscribe(response => {
-      //console.log(response.json());
-      this.posts = response.json();
-    });
+   
   }
 
   ngOnInit() {
+    this. http.get(this.url).subscribe(response => {
+      //console.log(response.json());
+      this.posts = response.json();
+    });
   }
 
   createPost(input: HTMLInputElement) {
@@ -28,6 +29,21 @@ export class PostsComponent implements OnInit {
 //      this.posts.push(post);    // Add end of the list;
       this.posts.splice(0, 0, post);  // Add begin of the list
       console.log(response.json());
+    });
+  }
+
+  updatePost(post) {
+    this.http.patch(this.url + '/' + post.id, JSON.stringify({ isRead: true})).subscribe(response =>{
+      console.log(response.json());
+    });
+//    this.http.patch(this.url, JSON.stringify({ isRead: true}));
+  }
+
+  deletePost(post) {
+    this.http.delete(this.url + '/' + post.id)
+    .subscribe(response => {
+      let index = this.posts.indexOf(post);
+      this.posts.splice(index, 1);
     });
   }
 

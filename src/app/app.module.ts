@@ -1,5 +1,5 @@
 import { SummaryPipe } from './summary.pipe';
-import { CoursesService } from './courses.service';
+import { CoursesService } from './services/courses.service';
 import { PersonComponent } from './person.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
@@ -24,6 +24,7 @@ import { PostsComponent } from './posts/posts.component';
 
 // Http
 import { HttpModule } from '@angular/http';
+import { PostService } from './services/post.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,7 +53,8 @@ import { HttpModule } from '@angular/http';
     HttpModule
   ],
   providers: [
-    CoursesService
+    CoursesService,
+    PostService
   ],
   bootstrap: [AppComponent]
 })
